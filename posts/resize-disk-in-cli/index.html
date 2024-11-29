@@ -102,7 +102,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "337"
+    "wordCount": "399"
   }]
   </script>
 
@@ -348,7 +348,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-29T16:01:37&#43;08:00">2024年11月29日</time><span class="px-2 text-primary-500">&middot;</span><span>337 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
+  <time datetime="2024-11-29T16:01:37&#43;08:00">2024年11月29日</time><span class="px-2 text-primary-500">&middot;</span><span>399 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
   
 
   
@@ -627,6 +627,34 @@
 </span></span><span class="line"><span class="cl">  └─openeuler-swap 253:1    <span class="m">0</span>    4G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
 </span></span><span class="line"><span class="cl">sr0                 11:0    <span class="m">1</span> 21.6G  <span class="m">0</span> rom
 </span></span></code></pre></div><p>能看到，<code>openeuler-root</code>已经是扩容完成了。</p>
+
+
+<h2 class="relative group">扩容文件系统 
+    <div id="%E6%89%A9%E5%AE%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%89%A9%E5%AE%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>如果是<code>ext4</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo resize2fs /dev/mapper/openeuler-root
+</span></span></code></pre></div><p>如果是<code>xfs</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo xfs_growfs /
+</span></span></code></pre></div><p>成功后，检查结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">df -h
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">文件系统                    大小  已用  可用 已用% 挂载点
+</span></span><span class="line"><span class="cl">/dev/mapper/openeuler-root   94G   33G   57G   37% /
+</span></span><span class="line"><span class="cl">devtmpfs                    4.0M     <span class="m">0</span>  4.0M    0% /dev
+</span></span><span class="line"><span class="cl">tmpfs                       3.7G     <span class="m">0</span>  3.7G    0% /dev/shm
+</span></span><span class="line"><span class="cl">tmpfs                       4.0M     <span class="m">0</span>  4.0M    0% /sys/fs/cgroup
+</span></span><span class="line"><span class="cl">tmpfs                       1.5G  8.8M  1.5G    1% /run
+</span></span><span class="line"><span class="cl">tmpfs                       3.7G     <span class="m">0</span>  3.7G    0% /tmp
+</span></span><span class="line"><span class="cl">/dev/sda2                   974M  481M  426M   54% /boot
+</span></span></code></pre></div><p>可以看到，文件系统里也显示为扩容后的容量了。</p>
 
           
           
