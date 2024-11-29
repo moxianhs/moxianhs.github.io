@@ -129,3 +129,31 @@ sr0                 11:0    1 21.6G  0 rom
 ```
 
 能看到，`openeuler-root`已经是扩容完成了。
+
+## 扩容文件系统
+
+如果是`ext4`：
+```shell
+sudo resize2fs /dev/mapper/openeuler-root
+
+```
+如果是`xfs`：
+```shell
+sudo xfs_growfs /
+```
+
+成功后，检查结果：
+```shell
+df -h
+
+文件系统                    大小  已用  可用 已用% 挂载点
+/dev/mapper/openeuler-root   94G   33G   57G   37% /
+devtmpfs                    4.0M     0  4.0M    0% /dev
+tmpfs                       3.7G     0  3.7G    0% /dev/shm
+tmpfs                       4.0M     0  4.0M    0% /sys/fs/cgroup
+tmpfs                       1.5G  8.8M  1.5G    1% /run
+tmpfs                       3.7G     0  3.7G    0% /tmp
+/dev/sda2                   974M  481M  426M   54% /boot
+```
+
+可以看到，文件系统里也显示为扩容后的容量了。
