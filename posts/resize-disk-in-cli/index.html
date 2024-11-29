@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Github Pages Configuration &middot; Mox&#39;s Blog</title>
-  <meta name="title" content="Github Pages Configuration &middot; Mox&#39;s Blog" />
+  <title>Linux虚拟机中命令行简单硬盘扩容 &middot; Mox&#39;s Blog</title>
+  <meta name="title" content="Linux虚拟机中命令行简单硬盘扩容 &middot; Mox&#39;s Blog" />
   
   
   
   
   
-  <link rel="canonical" href="https://moxianhs.github.io/posts/github-pages-configuration/" />
+  <link rel="canonical" href="https://moxianhs.github.io/posts/resize-disk-in-cli/" />
   
   
   
@@ -64,18 +64,18 @@
   
   
   
-  <meta property="og:url" content="https://moxianhs.github.io/posts/github-pages-configuration/">
+  <meta property="og:url" content="https://moxianhs.github.io/posts/resize-disk-in-cli/">
   <meta property="og:site_name" content="Mox&#39;s Blog">
-  <meta property="og:title" content="Github Pages Configuration">
+  <meta property="og:title" content="Linux虚拟机中命令行简单硬盘扩容">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-26T14:59:37+08:00">
-    <meta property="article:modified_time" content="2024-11-26T14:59:37+08:00">
+    <meta property="article:published_time" content="2024-11-29T16:01:37+08:00">
+    <meta property="article:modified_time" content="2024-11-29T16:01:37+08:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Github Pages Configuration">
+  <meta name="twitter:title" content="Linux虚拟机中命令行简单硬盘扩容">
 
   
   <script type="application/ld+json">
@@ -83,26 +83,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Github Pages Configuration",
-    "headline": "Github Pages Configuration",
+    "name": "Linux虚拟机中命令行简单硬盘扩容",
+    "headline": "Linux虚拟机中命令行简单硬盘扩容",
     
     
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/moxianhs.github.io\/posts\/github-pages-configuration\/",
+    "url" : "https:\/\/moxianhs.github.io\/posts\/resize-disk-in-cli\/",
     "author" : {
       "@type": "Person",
       "name": "Mox"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-11-26T14:59:37\u002b08:00",
-    "datePublished": "2024-11-26T14:59:37\u002b08:00",
+    "dateCreated": "2024-11-29T16:01:37\u002b08:00",
+    "datePublished": "2024-11-29T16:01:37\u002b08:00",
     
-    "dateModified": "2024-11-26T14:59:37\u002b08:00",
+    "dateModified": "2024-11-29T16:01:37\u002b08:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "174"
+    "wordCount": "337"
   }]
   </script>
 
@@ -303,7 +303,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Github Pages Configuration
+      Linux虚拟机中命令行简单硬盘扩容
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -348,7 +348,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-26T14:59:37&#43;08:00">2024年11月26日</time><span class="px-2 text-primary-500">&middot;</span><span>174 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-11-29T16:01:37&#43;08:00">2024年11月29日</time><span class="px-2 text-primary-500">&middot;</span><span>337 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
   
 
   
@@ -471,235 +471,162 @@
         <div class="article-content max-w-prose mb-20">
           
 
-<h1 class="relative group">流程概览 
-    <div id="%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88" class="anchor"></div>
+<h1 class="relative group">流程 
+    <div id="%E6%B5%81%E7%A8%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
-<ol>
-<li>在本地唰唰写。</li>
-<li>push 到你的 <code>GitHub</code> 仓库。</li>
-<li>GitHub Actions 自动执行 deploy 动作。</li>
-<li>部署成功访问 <code>&lt;username&gt;.github.io</code> 查看。</li>
-</ol>
-
-
-<h1 class="relative group">创建仓库 
-    <div id="%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
     </span>        
     
 </h1>
 
 
-<h2 class="relative group">仓库名 
-    <div id="%E4%BB%93%E5%BA%93%E5%90%8D" class="anchor"></div>
+<h2 class="relative group">扩容虚拟硬盘 
+    <div id="%E6%89%A9%E5%AE%B9%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BB%93%E5%BA%93%E5%90%8D" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%89%A9%E5%AE%B9%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98" aria-label="锚点">#</a>
     </span>        
     
 </h2>
-<p>在<code>GitHub</code>上创建一个名为<code>&lt;username&gt;.github.io</code>的仓库，比如我这个仓库就叫作：<code>moxianhs.github.io</code>，后面访问网页也是这个地址。</p>
-<p>你当然可以选择一个其他的名字，后面的流程也都能跑通，但唯一的问题就是：如果使用其他名字命名仓库，例如<code>mox-blog</code>，后面部署完成之后，访问地址就变成了<code>moxianhs.github.io/mox-blog</code>，如果不进行额外的配置，所有的 css、js、亦或是资源文件，都将找不到正确路径。</p>
+<p>首先在虚拟机管理中，给虚拟磁盘扩容。此处省略。</p>
 
 
-<h2 class="relative group">主分支 
-    <div id="%E4%B8%BB%E5%88%86%E6%94%AF" class="anchor"></div>
+<h2 class="relative group">查看容量 
+    <div id="%E6%9F%A5%E7%9C%8B%E5%AE%B9%E9%87%8F" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%BB%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E9%87%8F" aria-label="锚点">#</a>
     </span>        
     
 </h2>
-<p>注意主分支最好是<code>main</code>，主要的文件都放在这里，如果你选择用其他类似于<code>master</code>作为主分支，当然可以，注意在后面的 deploy 文件里改好对应字段。</p>
+<p>启动虚拟机之后，可以查看容量：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">lsblk
+</span></span><span class="line"><span class="cl">NAME               MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+</span></span><span class="line"><span class="cl">sda                  8:0    <span class="m">0</span>  100G  <span class="m">0</span> disk
+</span></span><span class="line"><span class="cl">├─sda1               8:1    <span class="m">0</span>    1M  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">├─sda2               8:2    <span class="m">0</span>    1G  <span class="m">0</span> part /boot
+</span></span><span class="line"><span class="cl">└─sda3               8:3    <span class="m">0</span>   39G  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">  ├─openeuler-root 253:0    <span class="m">0</span>   35G  <span class="m">0</span> lvm  /
+</span></span><span class="line"><span class="cl">  └─openeuler-swap 253:1    <span class="m">0</span>    4G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
+</span></span><span class="line"><span class="cl">sr0                 11:0    <span class="m">1</span> 21.6G  <span class="m">0</span> rom
+</span></span></code></pre></div><p>可以看到<code>sda</code>已经有了100G的大小，但是还没有应用到<code>sda3</code>上。</p>
 
 
-<h1 class="relative group">配置仓库 
-    <div id="%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93" class="anchor"></div>
+<h2 class="relative group">查看分区表 
+    <div id="%E6%9F%A5%E7%9C%8B%E5%88%86%E5%8C%BA%E8%A1%A8" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
-
-
-<h2 class="relative group">Action 权限 
-    <div id="action-%E6%9D%83%E9%99%90" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#action-%E6%9D%83%E9%99%90" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-<p>进入你的仓库，在<code>Settings -&gt; Actions -&gt; General -&gt; Workflow permissions</code>处，选择 <code>Read and write permissions</code>，否则，自动化动作无法将生成页面 push 进对应分支。</p>
-
-
-<h1 class="relative group">部署 
-    <div id="%E9%83%A8%E7%BD%B2" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%83%A8%E7%BD%B2" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
-
-
-<h2 class="relative group">本地配置 
-    <div id="%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E5%8C%BA%E8%A1%A8" aria-label="锚点">#</a>
     </span>        
     
 </h2>
+<p>运行如下命令，查看分区表。</p>
+<ul>
+<li>如果分区表类型为 GPT，直接操作即可。</li>
+<li>如果是 MBR，扩展主分区可能有限制（建议转 GPT）。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo parted /dev/sda print
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">型号：ATA VMware Virtual I <span class="o">(</span>scsi<span class="o">)</span>
+</span></span><span class="line"><span class="cl">磁盘 /dev/sda：107GB
+</span></span><span class="line"><span class="cl">扇区大小 <span class="o">(</span>逻辑/物理<span class="o">)</span>：512B/512B
+</span></span><span class="line"><span class="cl">分区表：gpt
+</span></span><span class="line"><span class="cl">磁盘标志：pmbr_boot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">编号  起始点  结束点  大小    文件系统  名称  标志
+</span></span><span class="line"><span class="cl"> <span class="m">1</span>    1049kB  2097kB  1049kB                  bios_grub
+</span></span><span class="line"><span class="cl"> <span class="m">2</span>    2097kB  1076MB  1074MB  ext4
+</span></span><span class="line"><span class="cl"> <span class="m">3</span>    1076MB  42.9GB  41.9GB                  lvm
+</span></span></code></pre></div><p>我这里是GPT，故直接下一步。</p>
 
 
-<h3 class="relative group">deploy.yaml 
-    <div id="deployyaml" class="anchor"></div>
+<h2 class="relative group">扩容物理卷 
+    <div id="%E6%89%A9%E5%AE%B9%E7%89%A9%E7%90%86%E5%8D%B7" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#deployyaml" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>在本地创建<code>.github/workflows/deploy.yaml</code>文件。</p>
-<p>内容大致如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Hugo site to GitHub Pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout repository</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build site</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo build</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy to GitHub Pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
-</span></span></span></code></pre></div><p>注意<code>on.push.branches</code>的值，这里必须设置成你的主分支的名字。</p>
-
-
-<h3 class="relative group">禁用 jekyll 
-    <div id="%E7%A6%81%E7%94%A8-jekyll" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%A6%81%E7%94%A8-jekyll" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>GitHub Pages</code> 可能会默认以 <code>Jekyll</code> 的方式解析文件，即使项目是 <code>Hugo</code> 构建的。这样就会出现构建失败的问题。故需要在项目根目录生成一个<code>static/.nojekyll</code>的空文件以禁用 <code>jekyll</code> 解析。</p>
-
-
-<h3 class="relative group">本地仓库设置 
-    <div id="%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<ol>
-<li>设置远端仓库为之前配置好的空的<code>GitHub</code>仓库。</li>
-<li>远端上游分支设置为主分支，如<code>main</code>。</li>
-<li>在本地事先测试好博客能正常运行。</li>
-<li><code>git add</code> 所有除了 <code>public</code>的文件。</li>
-<li><code>git push</code> 到远端上游即可。</li>
-</ol>
-
-
-<h2 class="relative group">远端配置 
-    <div id="%E8%BF%9C%E7%AB%AF%E9%85%8D%E7%BD%AE" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E8%BF%9C%E7%AB%AF%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%89%A9%E5%AE%B9%E7%89%A9%E7%90%86%E5%8D%B7" aria-label="锚点">#</a>
     </span>        
     
 </h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo parted /dev/sda
+</span></span><span class="line"><span class="cl">GNU Parted 3.6
+</span></span><span class="line"><span class="cl">使用 /dev/sda
+</span></span><span class="line"><span class="cl">欢迎使用 GNU Parted！输入 <span class="s1">&#39;help&#39;</span> 来查看命令列表。
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> unit MiB
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> print free
+</span></span><span class="line"><span class="cl">型号：ATA VMware Virtual I <span class="o">(</span>scsi<span class="o">)</span>
+</span></span><span class="line"><span class="cl">磁盘 /dev/sda：102400MiB
+</span></span><span class="line"><span class="cl">扇区大小 <span class="o">(</span>逻辑/物理<span class="o">)</span>：512B/512B
+</span></span><span class="line"><span class="cl">分区表：gpt
+</span></span><span class="line"><span class="cl">磁盘标志：pmbr_boot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">编号  起始点    结束点     大小      文件系统  名称  标志
+</span></span><span class="line"><span class="cl">      0.02MiB   1.00MiB    0.98MiB   可用空间
+</span></span><span class="line"><span class="cl"> <span class="m">1</span>    1.00MiB   2.00MiB    1.00MiB                   bios_grub
+</span></span><span class="line"><span class="cl"> <span class="m">2</span>    2.00MiB   1026MiB    1024MiB   ext4
+</span></span><span class="line"><span class="cl"> <span class="m">3</span>    1026MiB   40959MiB   39933MiB                  lvm
+</span></span><span class="line"><span class="cl">      40959MiB  102400MiB  61441MiB  可用空间
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> resizepart <span class="m">3</span> 100%
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> quit
+</span></span></code></pre></div><p>命令说明：</p>
+<ul>
+<li><code>unit MiB</code> 更改大小显示单位</li>
+<li><code>print free</code> 显示包含剩余可用空间的信息</li>
+<li><code>resizepart 3 100%</code> 重置编号<code>3</code>即<code>sda3</code>的大小到能够得到100%，即把所有空余空间都分配给<code>sda3</code>。</li>
+</ul>
+<p>更新内核分区信息，让系统识别新的分区大小：</p>
+<p><code>sudo partprobe /dev/sda</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">lsblk
+</span></span><span class="line"><span class="cl">NAME               MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+</span></span><span class="line"><span class="cl">sda                  8:0    <span class="m">0</span>  100G  <span class="m">0</span> disk
+</span></span><span class="line"><span class="cl">├─sda1               8:1    <span class="m">0</span>    1M  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">├─sda2               8:2    <span class="m">0</span>    1G  <span class="m">0</span> part /boot
+</span></span><span class="line"><span class="cl">└─sda3               8:3    <span class="m">0</span>   99G  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">  ├─openeuler-root 253:0    <span class="m">0</span>   35G  <span class="m">0</span> lvm  /
+</span></span><span class="line"><span class="cl">  └─openeuler-swap 253:1    <span class="m">0</span>    4G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
+</span></span><span class="line"><span class="cl">sr0                 11:0    <span class="m">1</span> 21.6G  <span class="m">0</span> rom
+</span></span></code></pre></div><p>可以看到这里，<code>sda3</code>的大小已经正确扩展了，但逻辑卷还是之前的大小。</p>
 
 
-<h3 class="relative group">Pages 
-    <div id="pages" class="anchor"></div>
+<h2 class="relative group">扩容逻辑卷 
+    <div id="%E6%89%A9%E5%AE%B9%E9%80%BB%E8%BE%91%E5%8D%B7" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#pages" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%89%A9%E5%AE%B9%E9%80%BB%E8%BE%91%E5%8D%B7" aria-label="锚点">#</a>
     </span>        
     
-</h3>
-<p><code>Settings -&gt; Pages</code> 里在 <code>Branch</code> 处，记得检查是否已经选择好<code>gh-pages</code>作为发布分支。</p>
-<p>以能看到</p>
-<blockquote>
-<p>Your GitHub Pages site is currently being built from the gh-pages branch.`
-这句话为准。</p>
-</blockquote>
-
-
-<h1 class="relative group">事后 
-    <div id="%E4%BA%8B%E5%90%8E" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8B%E5%90%8E" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
-<p>如果能在<code>Settings -&gt; Pages</code>里看到类似:</p>
-<blockquote>
-<p>Your site is live at <a href="https://moxianhs.github.io/" target="_blank">https://moxianhs.github.io/</a></p>
-</blockquote>
-<p>那就证明部署成功了，可以直接点击路径访问，旁边也有一个<code>Visit site</code>的按键，一键直达。</p>
-<p>如果失败，可以在仓库的<code>Actions</code>页面，看到部署的全过程，可以查看每一个步骤的日志，检查具体的失败信息，对症下药。</p>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo lvextend -l +100%FREE /dev/mapper/openeuler-root
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Device <span class="nb">read</span> short <span class="m">16896</span> bytes remaining
+</span></span><span class="line"><span class="cl">  Size of logical volume openeuler/root changed from 35.04 GiB <span class="o">(</span><span class="m">8971</span> extents<span class="o">)</span> to 95.04 GiB <span class="o">(</span><span class="m">24331</span> extents<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">  Logical volume openeuler/root successfully resized.
+</span></span></code></pre></div><p>这里的 <code>+100%FREE</code> 表示使用所有可用空间。</p>
+<p>而且需要注意，要保证命令中逻辑卷的名字需要和<code>lsblk</code>的结果中看到的一致。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">lsblk
+</span></span><span class="line"><span class="cl">NAME               MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+</span></span><span class="line"><span class="cl">sda                  8:0    <span class="m">0</span>  100G  <span class="m">0</span> disk
+</span></span><span class="line"><span class="cl">├─sda1               8:1    <span class="m">0</span>    1M  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">├─sda2               8:2    <span class="m">0</span>    1G  <span class="m">0</span> part /boot
+</span></span><span class="line"><span class="cl">└─sda3               8:3    <span class="m">0</span>   99G  <span class="m">0</span> part
+</span></span><span class="line"><span class="cl">  ├─openeuler-root 253:0    <span class="m">0</span>   95G  <span class="m">0</span> lvm  /
+</span></span><span class="line"><span class="cl">  └─openeuler-swap 253:1    <span class="m">0</span>    4G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
+</span></span><span class="line"><span class="cl">sr0                 11:0    <span class="m">1</span> 21.6G  <span class="m">0</span> rom
+</span></span></code></pre></div><p>能看到，<code>openeuler-root</code>已经是扩容完成了。</p>
 
           
           
@@ -722,8 +649,8 @@
           
         
       <script>
-        var oid = "views_posts\/github-pages-configuration.md"
-        var oid_likes = "likes_posts\/github-pages-configuration.md"
+        var oid = "views_posts\/resize-disk-in-cli.md"
+        var oid_likes = "likes_posts\/resize-disk-in-cli.md"
       </script>
       
       
@@ -743,7 +670,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/hugo-configuration/">
+            <a class="flex group mr-3" href="/posts/github-pages-configuration/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -755,11 +682,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Hugo Configuration</span
+                  >Github Pages Configuration</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-11-26T14:58:18&#43;08:00">2024年11月26日</time>
+                    <time datetime="2024-11-26T14:59:37&#43;08:00">2024年11月26日</time>
                   
                 </span>
               </span>
@@ -767,28 +694,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/resize-disk-in-cli/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Linux虚拟机中命令行简单硬盘扩容</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-11-29T16:01:37&#43;08:00">2024年11月29日</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
