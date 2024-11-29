@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Hugo Configuration &middot; Mox&#39;s Blog</title>
-  <meta name="title" content="Hugo Configuration &middot; Mox&#39;s Blog" />
+  <title>Github Pages Configuration &middot; Mox&#39;s Blog</title>
+  <meta name="title" content="Github Pages Configuration &middot; Mox&#39;s Blog" />
   
   
   
   
   
-  <link rel="canonical" href="https://moxianhs.github.io/posts/hugo-configuration/" />
+  <link rel="canonical" href="https://moxianhs.github.io/posts/github-pages-configuration/" />
   
   
   
@@ -64,18 +64,18 @@
   
   
   
-  <meta property="og:url" content="https://moxianhs.github.io/posts/hugo-configuration/">
+  <meta property="og:url" content="https://moxianhs.github.io/posts/github-pages-configuration/">
   <meta property="og:site_name" content="Mox&#39;s Blog">
-  <meta property="og:title" content="Hugo Configuration">
+  <meta property="og:title" content="Github Pages Configuration">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-26T14:58:18+08:00">
-    <meta property="article:modified_time" content="2024-11-26T14:58:18+08:00">
+    <meta property="article:published_time" content="2024-11-26T14:59:37+08:00">
+    <meta property="article:modified_time" content="2024-11-26T14:59:37+08:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hugo Configuration">
+  <meta name="twitter:title" content="Github Pages Configuration">
 
   
   <script type="application/ld+json">
@@ -83,26 +83,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Hugo Configuration",
-    "headline": "Hugo Configuration",
+    "name": "Github Pages Configuration",
+    "headline": "Github Pages Configuration",
     
     
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/moxianhs.github.io\/posts\/hugo-configuration\/",
+    "url" : "https:\/\/moxianhs.github.io\/posts\/github-pages-configuration\/",
     "author" : {
       "@type": "Person",
       "name": "Mox"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-11-26T14:58:18\u002b08:00",
-    "datePublished": "2024-11-26T14:58:18\u002b08:00",
+    "dateCreated": "2024-11-26T14:59:37\u002b08:00",
+    "datePublished": "2024-11-26T14:59:37\u002b08:00",
     
-    "dateModified": "2024-11-26T14:58:18\u002b08:00",
+    "dateModified": "2024-11-26T14:59:37\u002b08:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "116"
+    "wordCount": "173"
   }]
   </script>
 
@@ -303,7 +303,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Hugo Configuration
+      Github Pages Configuration
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -348,7 +348,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-26T14:58:18&#43;08:00">2024年11月26日</time><span class="px-2 text-primary-500">&middot;</span><span>116 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-11-26T14:59:37&#43;08:00">2024年11月26日</time><span class="px-2 text-primary-500">&middot;</span><span>173 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
   
 
   
@@ -471,226 +471,234 @@
         <div class="article-content max-w-prose mb-20">
           
 
-<h1 class="relative group">Hugo 安装 
-    <div id="hugo-%E5%AE%89%E8%A3%85" class="anchor"></div>
+<h1 class="relative group">流程概览 
+    <div id="%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#hugo-%E5%AE%89%E8%A3%85" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88" aria-label="锚点">#</a>
     </span>        
     
 </h1>
-<p>在安装<code>Hugo</code>之前，请首先自行安装<code>go</code>和<code>git</code>到你的系统上。</p>
+<ol>
+<li>在本地唰唰写。</li>
+<li>push 到你的 <code>GitHub</code> 仓库。</li>
+<li>GitHub Actions 自动执行 deploy 动作。</li>
+<li>部署成功访问 <code>&lt;username&gt;.github.io</code> 查看。</li>
+</ol>
 
 
-<h2 class="relative group">Windows 
-    <div id="windows" class="anchor"></div>
+<h1 class="relative group">创建仓库 
+    <div id="%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#windows" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-
-
-<h3 class="relative group">Chocolatey 
-    <div id="chocolatey" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#chocolatey" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>choco install hugo-extended</code></p>
-
-
-<h3 class="relative group">Scoop 
-    <div id="scoop" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#scoop" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>scoop install hugo-extended</code></p>
-
-
-<h3 class="relative group">Winget 
-    <div id="winget" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#winget" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>winget install hugo-extended</code></p>
-
-
-<h2 class="relative group">macOS 
-    <div id="macos" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#macos" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-<p><code>brew install hugo</code></p>
-
-
-<h2 class="relative group">Linux 
-    <div id="linux" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#linux" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-
-
-<h3 class="relative group">ArchLinux 
-    <div id="archlinux" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#archlinux" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>sudo pacman -S hugo</code></p>
-
-
-<h3 class="relative group">Ubuntu/Debian 
-    <div id="ubuntudebian" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ubuntudebian" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>sudo apt install hugo</code></p>
-
-
-<h3 class="relative group">Fedora 
-    <div id="fedora" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#fedora" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p><code>sudo dnf install hugo</code></p>
-
-
-<h3 class="relative group">Others 
-    <div id="others" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#others" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>有<code>prebuilt</code>可供下载，此事于<a href="https://gohugo.io/installation/linux/" target="_blank">Hugo 官网</a>亦有记载。</p>
-
-
-<h2 class="relative group">验证安装成功 
-    <div id="%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F" aria-label="锚点">#</a>
-    </span>        
-    
-</h2>
-<p><code>hugo version</code>
-输出依据版本平台等有所不同，示例如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo v0.136.5+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>2024-10-24T12:26:27Z <span class="nv">VendorInfo</span><span class="o">=</span>brew
-</span></span></code></pre></div>
-
-<h1 class="relative group">Blowfish 安装 
-    <div id="blowfish-%E5%AE%89%E8%A3%85" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#blowfish-%E5%AE%89%E8%A3%85" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
     </span>        
     
 </h1>
 
 
-<h2 class="relative group">CLI 
-    <div id="cli" class="anchor"></div>
+<h2 class="relative group">仓库名 
+    <div id="%E4%BB%93%E5%BA%93%E5%90%8D" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cli" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BB%93%E5%BA%93%E5%90%8D" aria-label="锚点">#</a>
     </span>        
     
 </h2>
-<p><code>npx blowfish-tools</code></p>
-<p>or</p>
-<p><code>npm i -g blowfish-tools</code></p>
-<p>而后：</p>
-<p><code>blowfish-tools</code></p>
+<p>在<code>GitHub</code>上创建一个名为<code>&lt;username&gt;.github.io</code>的仓库，比如我这个仓库就叫作：<code>moxianhs.github.io</code>，后面访问网页也是这个地址。</p>
+<p>你当然可以选择一个其他的名字，后面的流程也都能跑通，但唯一的问题就是：如果使用其他名字命名仓库，例如<code>mox-blog</code>，后面部署完成之后，访问地址就变成了<code>moxianhs.github.io/mox-blog</code>，如果不进行额外的配置，所有的 css、js、亦或是资源文件，都将找不到正确路径。</p>
 
 
-<h2 class="relative group">Non-CLI 
-    <div id="non-cli" class="anchor"></div>
+<h2 class="relative group">主分支 
+    <div id="%E4%B8%BB%E5%88%86%E6%94%AF" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#non-cli" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%BB%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
     </span>        
     
 </h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> mywebsite
-</span></span><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
-</span></span></code></pre></div><p>在项目根目录，删除由 Hugo 自动生成的 <code>hugo.toml</code>，从 <code>themes/blowfish/config/_default</code> 里复制 <code>hugo.toml</code> 到根目录。</p>
+<p>注意主分支最好是<code>main</code>，主要的文件都放在这里，如果你选择用其他类似于<code>master</code>作为主分支，当然可以，注意在后面的 deploy 文件里改好对应字段。</p>
 
 
-<h1 class="relative group">开始使用 Hugo 
-    <div id="%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-hugo" class="anchor"></div>
+<h1 class="relative group">配置仓库 
+    <div id="%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-hugo" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
     </span>        
     
 </h1>
-<p>开一个新博客：</p>
-<p><code>hugo new site &lt;site-name&gt;</code></p>
-<p>写一篇新文章：</p>
-<p><code>hugo new posts/&lt;article-name&gt;.md</code></p>
-<p>启动：</p>
-<p><code>hugo server</code></p>
-<p>启动（带草稿）：</p>
-<p><code>hugo server -D</code></p>
-<p>更多请见：<a href="https://gohugo.io/getting-started/usage/" target="_blank">Basic usage</a></p>
+
+
+<h2 class="relative group">Action 权限 
+    <div id="action-%E6%9D%83%E9%99%90" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#action-%E6%9D%83%E9%99%90" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>进入你的仓库，在<code>Settings -&gt; Actions -&gt; General -&gt; Workflow permissions</code>处，选择 <code>Read and write permissions</code>，否则，自动化动作无法将生成页面 push 进对应分支。</p>
+
+
+<h1 class="relative group">部署 
+    <div id="%E9%83%A8%E7%BD%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%83%A8%E7%BD%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h1>
+
+
+<h2 class="relative group">本地配置 
+    <div id="%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">deploy.yaml 
+    <div id="deployyaml" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#deployyaml" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在本地创建<code>.github/workflows/deploy.yaml</code>文件。</p>
+<p>内容大致如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Hugo site to GitHub Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout repository</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build site</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy to GitHub Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
+</span></span></span></code></pre></div><p>注意<code>on.push.branches</code>的值，这里必须设置成你的主分支的名字。</p>
+
+
+<h3 class="relative group">禁用 jekyll 
+    <div id="%E7%A6%81%E7%94%A8-jekyll" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%A6%81%E7%94%A8-jekyll" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><code>GitHub Pages</code> 可能会默认以 <code>Jekyll</code> 的方式解析文件，即使项目是 <code>Hugo</code> 构建的。这样就会出现构建失败的问题。故需要在项目根目录生成一个<code>static/.nojekyll</code>的空文件以禁用 <code>jekyll</code> 解析。</p>
+
+
+<h3 class="relative group">本地仓库设置 
+    <div id="%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>设置远端仓库为之前配置好的空的<code>GitHub</code>仓库。</li>
+<li>远端上游分支设置为主分支，如<code>main</code>。</li>
+<li>在本地事先测试好博客能正常运行。</li>
+<li><code>git add</code> 所有除了 <code>public</code>的文件。</li>
+<li><code>git push</code> 到远端上游即可。</li>
+</ol>
+
+
+<h2 class="relative group">远端配置 
+    <div id="%E8%BF%9C%E7%AB%AF%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%BF%9C%E7%AB%AF%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Pages 
+    <div id="pages" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#pages" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><code>Settings -&gt; Pages</code> 里在 <code>Branch</code> 处，记得检查是否已经选择好<code>gh-pages</code>作为发布分支。</p>
+<p>以能看到</p>
+<blockquote>
+<p>Your GitHub Pages site is currently being built from the gh-pages branch.`
+这句话为准。</p>
+</blockquote>
+
+
+<h1 class="relative group">事后 
+    <div id="%E4%BA%8B%E5%90%8E" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8B%E5%90%8E" aria-label="锚点">#</a>
+    </span>        
+    
+</h1>
+<p>如果能在<code>Settings -&gt; Pages</code>里看到类似:</p>
+<blockquote>
+<p>Your site is live at <a href="https://moxianhs.github.io/" target="_blank">https://moxianhs.github.io/</a></p>
+</blockquote>
+<p>那就证明部署成功了，可以直接点击路径访问，旁边也有一个<code>Visit site</code>的按键，一键直达。</p>
 
           
           
@@ -713,8 +721,8 @@
           
         
       <script>
-        var oid = "views_posts\/hugo-configuration.md"
-        var oid_likes = "likes_posts\/hugo-configuration.md"
+        var oid = "views_posts\/github-pages-configuration.md"
+        var oid_likes = "likes_posts\/github-pages-configuration.md"
       </script>
       
       
@@ -734,30 +742,30 @@
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/github-pages-configuration/">
+            <a class="flex group mr-3" href="/posts/hugo-configuration/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Github Pages Configuration</span
+                  >Hugo Configuration</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-11-26T14:59:37&#43;08:00">2024年11月26日</time>
+                    <time datetime="2024-11-26T14:58:18&#43;08:00">2024年11月26日</time>
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
