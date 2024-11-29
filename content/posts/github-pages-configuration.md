@@ -102,3 +102,5 @@ jobs:
 > Your site is live at https://moxianhs.github.io/
 
 那就证明部署成功了，可以直接点击路径访问，旁边也有一个`Visit site`的按键，一键直达。
+
+如果失败，可以在仓库的`Actions`页面，看到部署的全过程，可以查看每一个步骤的日志，检查具体的失败信息，对症下药。
