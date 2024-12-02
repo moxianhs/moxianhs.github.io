@@ -120,6 +120,24 @@
 
 
 
+<script data-id="umami-script" async src="https://analytics.umami.is/script.js"
+        data-website-id="08b8c4e5-656e-4bcc-9e7a-ee01c915fd8a">
+</script>
+
+
+
+<script type="text/javascript">
+    document.querySelector('script[data-id="umami-script"]')
+        .addEventListener('load', function () {
+            const type = document.head.querySelector('meta[property = "og:type"]').getAttribute('content');
+            let title = document.head.querySelector('meta[property = "og:title"]').getAttribute('content');
+            let url = document.head.querySelector('meta[property = "og:url"]').getAttribute('content');
+            umami.track(type + ':' + title, {'url': url});
+    });
+</script>
+
+
+
   
   
   <meta name="theme-color"/>
