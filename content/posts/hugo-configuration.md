@@ -3,23 +3,25 @@ date = '2024-11-26T14:58:18+08:00'
 title = 'Hugo Configuration'
 +++
 
+# Hugo 是什么
+
+`Hugo`是一个静态网页生成工具，可以通过配置好的主题和你自己写的 `markdown` 文档生成一个可以部署的静态网站。
+
+所以需要什么呢？
+
+`hugo`装到你的机器上。
+
+`theme` 一个主题，可以去`hugo`的[官网](https://themes.gohugo.io/)里去下载。
+
 # Hugo 安装
 
 在安装`Hugo`之前，请首先自行安装`go`和`git`到你的系统上。
 
 ## Windows
 
-### Chocolatey
+推荐直接下载二进制安装。官网推荐的使用包管理器的安装方式存在货不对版的问题。
 
-`choco install hugo-extended`
-
-### Scoop
-
-`scoop install hugo-extended`
-
-### Winget
-
-`winget install hugo-extended`
+https://github.com/gohugoio/hugo/releases
 
 ## macOS
 
@@ -41,7 +43,7 @@ title = 'Hugo Configuration'
 
 ### Others
 
-有`prebuilt`可供下载，此事于[Hugo 官网](https://gohugo.io/installation/linux/)亦有记载。
+亦有`prebuilt`可供下载。
 
 ## 验证安装成功
 
@@ -53,6 +55,8 @@ hugo v0.136.5+extended darwin/arm64 BuildDate=2024-10-24T12:26:27Z VendorInfo=br
 ```
 
 # Blowfish 安装
+
+这是一个主题，如果这个主题因为系统环境安装不上，可以换成其他主题（说的就是你啊，Windows）。
 
 ## CLI
 
