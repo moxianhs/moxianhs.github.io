@@ -22,6 +22,8 @@ title = '给完全陌生者的 Cherry Studio 和 SiliconFlow 入门指南'
 
 首先在硅基流动的 [官网](https://siliconflow.cn) 里，像其他网站一样注册一个账号。
 
+> 通过我的邀请链接注册，你和我都会获得 14 元的赠送余额，所以，拜托了：[注册链接](https://cloud.siliconflow.cn/i/40nvTwOA)
+
 登录后，就会进入到模型广场的界面：
 
 ![playground](/img/siliconflow/playground.png)
