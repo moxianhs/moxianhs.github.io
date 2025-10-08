@@ -9,7 +9,18 @@
     <managingEditor>moxian.wzy@gmail.com (Mox)</managingEditor>
     <webMaster>moxian.wzy@gmail.com (Mox)</webMaster>
     <copyright>© 2025 Mox</copyright>
-    <lastBuildDate>Fri, 17 Jan 2025 02:57:46 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Oct 2025 17:17:08 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>给完全陌生者的 Cherry Studio 和 SiliconFlow 入门指南</title>
+      <link>https://moxianhs.github.io/posts/cherry-studio-and-siliconflow/</link>
+      <pubDate>Wed, 08 Oct 2025 17:17:08 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/cherry-studio-and-siliconflow/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>静态博客文章里的图片</title>
       <link>https://moxianhs.github.io/posts/imgs-beside-article/</link>
