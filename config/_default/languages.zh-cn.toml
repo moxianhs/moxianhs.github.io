@@ -12,15 +12,16 @@ title = "Mox's Blog"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
-  # copyright = "Copy, _right?_ :thinking_face:"
+  # copyright = "Copy, _right?_ :{year}:"
 
 [params.author]
   name = "Mox"
   email = "moxian.wzy@gmail.com"
   image = "img/avatar.jpg"
   imageQuality = 96
-  headline = "从何说起"
-  bio = "There used to be a story teller."
+  headline = "如果可以，就成为更好的自己"
+  subtitle = "操作系统·异构内存·强化学习"
+  bio = "A Master student of DSLab @LZU "
    links = [
      { email = "mailto:moxian.wzy@gmail.com" },
 #     { link = "https://link-to-some-website.com/" },
