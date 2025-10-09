@@ -27,6 +27,25 @@ mkdir -p /mnt/everything
 mount /dev/sr0 /mnt/everything
 ```
 
+换源：
+```bash
+# 备份一下
+mv /etc/yum.repo.d/openEuler.repo /etc/yum.repo.d/openEuler.repo.backup
+
+vi /etc/yum.repo.d/openEuler.repo
+
+```
+将文件内容改为以下：
+
+```toml
+[openEuler]
+name=openEuler
+baseurl=file:///mnt/everything
+enable=1
+gpgcheck=0
+```
+
+以上文件名需要随机应变，根据现场环境更改。
 
 测试一下：
 
@@ -36,4 +55,4 @@ yum makecache
 yum install vim
 ```
 
-不出意外应该就能装了
+不出意外应该就能装了。
