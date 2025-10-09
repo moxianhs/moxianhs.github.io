@@ -9,7 +9,17 @@
     <managingEditor>moxian.wzy@gmail.com (Mox)</managingEditor>
     <webMaster>moxian.wzy@gmail.com (Mox)</webMaster>
     <copyright>© 2025 Mox</copyright>
-    <lastBuildDate>Wed, 08 Oct 2025 20:33:37 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Oct 2025 10:59:15 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>离线环境下使用 everthing 版本 ISO 安装 openEuler 系统并换源</title>
+      <link>https://moxianhs.github.io/posts/euler-everything/</link>
+      <pubDate>Thu, 09 Oct 2025 10:59:15 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/euler-everything/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>About</title>
