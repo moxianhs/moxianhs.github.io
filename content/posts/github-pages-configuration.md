@@ -1,16 +1,18 @@
 +++
 date = '2024-11-26T14:59:37+08:00'
 title = 'Github Pages Configuration'
+categories = ['技术教程']
+tags = ['GitHub', '部署', '静态博客', '教程']
 +++
 
-# 流程概览
+## 流程概览
 
 1. 在本地唰唰写。
 2. push 到你的 `GitHub` 仓库。
 3. GitHub Actions 自动执行 deploy 动作。
 4. 部署成功访问 `<username>.github.io` 查看。
 
-# 创建仓库
+## 创建仓库
 
 ## 仓库名
 
@@ -22,13 +24,13 @@ title = 'Github Pages Configuration'
 
 注意主分支最好是`main`，主要的文件都放在这里，如果你选择用其他类似于`master`作为主分支，当然可以，注意在后面的 deploy 文件里改好对应字段。
 
-# 配置仓库
+## 配置仓库
 
 ## Action 权限
 
 进入你的仓库，在`Settings -> Actions -> General -> Workflow permissions`处，选择 `Read and write permissions`，否则，自动化动作无法将生成页面 push 进对应分支。
 
-# 部署
+## 部署
 
 ## 本地配置
 
@@ -91,15 +93,15 @@ jobs:
 
 `Settings -> Pages` 里在 `Branch` 处，记得检查是否已经选择好`gh-pages`作为发布分支。
 
-以能看到 
+以能看到
 >Your GitHub Pages site is currently being built from the gh-pages branch.`
 这句话为准。
 
-# 事后
+## 事后
 
 如果能在`Settings -> Pages`里看到类似:
 
-> Your site is live at https://moxianhs.github.io/
+> Your site is live at <https://moxianhs.github.io/>
 
 那就证明部署成功了，可以直接点击路径访问，旁边也有一个`Visit site`的按键，一键直达。
 

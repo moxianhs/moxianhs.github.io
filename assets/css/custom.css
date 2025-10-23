@@ -266,3 +266,50 @@ body {
     background-color: rgb(243, 244, 246);
     color: rgba(46, 64, 91, 0.94);
 }
+
+/* 标签和分类链接样式 - 交换默认和悬停样式，修复抖动问题 */
+.flex.flex-row.flex-wrap.items-center a[href*="/tags/"],
+.flex.flex-row.flex-wrap.items-center a[href*="/categories/"] {
+    background-color: rgba(46, 64, 91, 0.94);
+    color: rgb(243, 244, 246);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 2px solid rgba(46, 64, 91, 0.94); /* 添加下划线保持高度 */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* 暗色模式 */
+.dark .flex.flex-row.flex-wrap.items-center a[href*="/tags/"],
+.dark .flex.flex-row.flex-wrap.items-center a[href*="/categories/"] {
+    background-color: rgb(243, 244, 246);
+    color: rgba(46, 64, 91, 0.94);
+    border-bottom: 2px solid rgb(243, 244, 246); /* 添加下划线保持高度 */
+}
+
+/* 鼠标悬停效果 */
+.flex.flex-row.flex-wrap.items-center a[href*="/tags/"]:hover,
+.flex.flex-row.flex-wrap.items-center a[href*="/categories/"]:hover {
+    color: rgba(68, 91, 149);
+    border-bottom: 2px solid rgba(68, 91, 149, 0.7);
+    background-color: transparent;
+}
+
+.dark .flex.flex-row.flex-wrap.items-center a[href*="/tags/"]:hover,
+.dark .flex.flex-row.flex-wrap.items-center a[href*="/categories/"]:hover {
+    color: rgb(242, 242, 241);
+    border-bottom: 2px solid rgba(242, 242, 241, 0.7);
+    background-color: transparent;
+}
+
+/* 移除 badge 内部的 span 样式 */
+.flex.flex-row.flex-wrap.items-center a[href*="/tags/"] span,
+.flex.flex-row.flex-wrap.items-center a[href*="/categories/"] span {
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    background: transparent;
+}

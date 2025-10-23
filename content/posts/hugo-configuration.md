@@ -1,9 +1,11 @@
 +++
 date = '2024-11-26T14:58:18+08:00'
 title = 'Hugo Configuration'
+categories = ['技术教程']
+tags = ['Hugo', '静态博客', '配置', '教程']
 +++
 
-# Hugo 是什么
+## Hugo 是什么
 
 `Hugo`是一个静态网页生成工具，可以通过配置好的主题和你自己写的 `markdown` 文档生成一个可以部署的静态网站。
 
@@ -13,7 +15,7 @@ title = 'Hugo Configuration'
 
 `theme` 一个主题，可以去`hugo`的[官网](https://themes.gohugo.io/)里去下载。
 
-# Hugo 安装
+## Hugo 安装
 
 在安装`Hugo`之前，请首先自行安装`go`和`git`到你的系统上。
 
@@ -21,7 +23,7 @@ title = 'Hugo Configuration'
 
 推荐直接下载二进制安装。官网推荐的使用包管理器的安装方式存在货不对版的问题。
 
-https://github.com/gohugoio/hugo/releases
+<https://github.com/gohugoio/hugo/releases>
 
 ## macOS
 
@@ -54,7 +56,7 @@ https://github.com/gohugoio/hugo/releases
 hugo v0.136.5+extended darwin/arm64 BuildDate=2024-10-24T12:26:27Z VendorInfo=brew
 ```
 
-# Blowfish 安装
+## Blowfish 安装
 
 这是一个主题，如果这个主题因为系统环境安装不上，可以换成其他主题（说的就是你啊，Windows）。
 
@@ -80,7 +82,7 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 
 在项目根目录，删除由 Hugo 自动生成的 `hugo.toml`，从 `themes/blowfish/config/_default` 里复制 `hugo.toml` 到根目录。
 
-# 开始使用 Hugo
+## 开始使用 Hugo
 
 开一个新博客：
 

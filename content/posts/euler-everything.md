@@ -2,14 +2,16 @@
 date = '2025-10-09T10:59:15+08:00'
 draft = false
 title = '离线环境下使用 everthing 版本 ISO 安装 openEuler 系统并换源'
+categories = ['系统运维']
+tags = ['openEuler', 'Linux', '安装', '换源']
 +++
 
 
-# 安装
+## 安装
 
 如正常安装 openEuler 一样安装。
 
-# 换源
+## 换源
 
 先找到设备号
 
@@ -28,6 +30,7 @@ mount /dev/sr0 /mnt/everything
 ```
 
 换源：
+
 ```bash
 # 备份一下
 mv /etc/yum.repo.d/openEuler.repo /etc/yum.repo.d/openEuler.repo.backup
@@ -35,6 +38,7 @@ mv /etc/yum.repo.d/openEuler.repo /etc/yum.repo.d/openEuler.repo.backup
 vi /etc/yum.repo.d/openEuler.repo
 
 ```
+
 将文件内容改为以下：
 
 ```toml

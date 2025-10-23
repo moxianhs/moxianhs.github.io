@@ -1,17 +1,18 @@
 +++
 date = '2024-11-29T16:01:37+08:00'
 title = 'Linux虚拟机中命令行简单硬盘扩容'
+categories = ['系统运维']
+tags = ['Linux', '硬盘扩容', '虚拟机', '系统管理']
 +++
 
 
-# 流程
+## 流程
 
 ## 扩容虚拟硬盘
 
 首先在虚拟机管理中，给虚拟磁盘扩容。此处省略。
 
 ## 查看容量
-
 
 启动虚拟机之后，可以查看容量：
 
@@ -81,6 +82,7 @@ GNU Parted 3.6
 ```
 
 命令说明：
+
 - `unit MiB` 更改大小显示单位
 - `print free` 显示包含剩余可用空间的信息
 - `resizepart 3 100%` 重置编号`3`即`sda3`的大小到能够得到100%，即把所有空余空间都分配给`sda3`。
@@ -112,6 +114,7 @@ Device read short 16896 bytes remaining
   Size of logical volume openeuler/root changed from 35.04 GiB (8971 extents) to 95.04 GiB (24331 extents).
   Logical volume openeuler/root successfully resized.
 ```
+
 这里的 `+100%FREE` 表示使用所有可用空间。
 
 而且需要注意，要保证命令中逻辑卷的名字需要和`lsblk`的结果中看到的一致。
@@ -133,16 +136,20 @@ sr0                 11:0    1 21.6G  0 rom
 ## 扩容文件系统
 
 如果是`ext4`：
+
 ```shell
 sudo resize2fs /dev/mapper/openeuler-root
 
 ```
+
 如果是`xfs`：
+
 ```shell
 sudo xfs_growfs /
 ```
 
 成功后，检查结果：
+
 ```shell
 df -h
 

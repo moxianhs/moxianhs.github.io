@@ -1,10 +1,13 @@
 +++
 date = '2025-10-08T17:17:08+08:00'
 title = '给完全陌生者的 Cherry Studio 和 SiliconFlow 入门指南'
+
+categories = ['技术教程']
+tags = ['AI', 'Cherry Studio', 'SiliconFlow', '教程', '工具']
 +++
 
 
-# 概览
+## 概览
 
 通过使用 Cherry Studio ，你可以调用各种各样的大语言模型（Large Language Model）来完成你需要 AI 回答你的任何问题。
 
@@ -18,7 +21,7 @@ title = '给完全陌生者的 Cherry Studio 和 SiliconFlow 入门指南'
 
 使用硅基流动（SiliconFlow）这种平台就能解决这些问题。
 
-# 硅基流动
+## 硅基流动
 
 首先在硅基流动的 [官网](https://siliconflow.cn) 里，像其他网站一样注册一个账号。
 
@@ -51,10 +54,9 @@ title = '给完全陌生者的 Cherry Studio 和 SiliconFlow 入门指南'
 
 挑选好心仪的模型（不知道怎么选，就选最新的）后，就可以进入到下一节了。
 
-# Cherry Studio
+## Cherry Studio
 
 Cherry Studio 直译就是樱桃工作室，可以在本地调用各种服务商提供的大模型服务，且所有数据都存在本地，故软件本身不会引入任何隐私风险。
-
 
 打开 Cherry Studio 的 [官网](https://www.cherry-ai.com/) ，点击下载客户端即可：
 
@@ -66,11 +68,9 @@ Cherry Studio 直译就是樱桃工作室，可以在本地调用各种服务商
 
 ![homepage](/img/cherry/studio.png)
 
-
 点击左下角的齿轮设置图标，进入设置界面，需要配置硅基流动的 API 密钥才能愉快使用之前在硅基流动那边选好的模型。
 
 ![settings](/img/cherry/settings.png)
-
 
 回到硅基流动这边，点击侧边栏的钥匙按钮，进入密钥管理的界面：
 
@@ -108,7 +108,7 @@ Cherry Studio 直译就是樱桃工作室，可以在本地调用各种服务商
 
 现在，一个可以使用的 Cherry Studio 就展现在你面前，在输入框里提一个问题，然后按下回车吧。
 
-# 课后习题
+## 课后习题
 
 Cherry Studio 还有很多很多按钮我没有介绍是什么，但此时已经有一个可以使用的提问系统了，所以你应该怎么做，就不用我多说了吧？
 

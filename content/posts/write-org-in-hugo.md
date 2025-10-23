@@ -3,6 +3,8 @@ title = "如何在 Hugo 里写 Org"
 author = ["Mox W"]
 date = 2025-10-11T00:00:00+08:00
 draft = false
+categories = ["技术教程"]
+tags = ["Emacs", "Org", "Hugo", "教程"]
 +++
 
 ## 配置 {#配置}
@@ -50,7 +52,6 @@ draft = false
 #+date: <2025-10-11 六>
 #+hugo_base_dir: ../
 ```
-
 
 ## 生成 Markdown {#生成-markdown}
 

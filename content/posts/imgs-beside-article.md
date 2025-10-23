@@ -1,12 +1,13 @@
 +++
 date = '2025-01-02T17:42:56+08:00'
 title = '静态博客文章里的图片'
+categories = ['技术教程']
+tags = ['静态博客', '图片', 'Hugo', '配置']
 +++
 
 如下图所示，是本文希望达到的效果。
 
 ![Logo](/img/miHoYo-Logo.png)
-
 
 ```markdown
 
@@ -20,4 +21,3 @@ title = '静态博客文章里的图片'
 ls static/img/
 miHoYo-Logo.png
 ```
-

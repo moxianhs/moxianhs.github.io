@@ -2,10 +2,12 @@
 date = '2024-12-23T15:18:43+08:00'
 
 title = '简单的Gcov+Lcov使用'
+categories = ['开发工具']
+tags = ['Gcov', '代码测试', '覆盖率', '工具']
 +++
 
 
-# Gcov + Lcov
+## Gcov + Lcov
 
 > Gcov is a source code coverage analysis and statement-by-statement profiling tool. Gcov generates exact counts of the number of times each statement in a program is executed and annotates source code to add instrumentation. Gcov comes as a standard utility with the GNU Compiler Collection (GCC) suite.
 
@@ -36,6 +38,7 @@ gcov: $(LIB)
         gcc benchmark.c  -g -o libzstd-gcov -I./lib -I./examples -O2 -fprofile-arcs -ftest-coverage ./lib/libzstd.a
         gcc benchmark.c  -g -o libzstd-gcov.s -I./lib -I./examples -O2 -fprofile-arcs -ftest-coverage -S ./lib/libzstd.a
 ```
+
 假设`benchmark.c`是此次测试的入口文件，`libzstd`是本次测试的库，主要是需要处理好依赖，虽然麻烦，但只要把报错里缺的都填上去就好了。
 
 ## 指令序列
