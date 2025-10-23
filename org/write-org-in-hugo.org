@@ -2,6 +2,7 @@
 #+author: Mox W
 #+date: <2025-10-11 六>
 #+hugo_base_dir: ../
+#+filetags: Emacs Org Hugo @技术教程 
 
 * 配置
 
@@ -47,6 +48,23 @@
 #+author: Mox W
 #+date: <2025-10-11 六>
 #+hugo_base_dir: ../
+#+filetags: Emacs Org Hugo @技术教程 
+#+end_src
+
+顺便说明一下 Tag 和 Category 怎么配置：
+
+#+begin_src org
+#+filetags: tag1 tag2 @cat1 @cat2
+#+end_src
+
+可以看到，标签或分类之间是用空格分割的。如果希望标签或分类本身就包含空格呢？
+
+=ox-hugo= 使用如下规则：
+
+#+begin_src plain
+abc_def   -> abc-def
+abc__def  -> abc def
+abc___def -> abc_def
 #+end_src
 
 

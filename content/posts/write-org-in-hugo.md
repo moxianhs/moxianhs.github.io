@@ -2,9 +2,9 @@
 title = "如何在 Hugo 里写 Org"
 author = ["Mox W"]
 date = 2025-10-11T00:00:00+08:00
-draft = false
+tags = ["Emacs", "Org", "Hugo"]
 categories = ["技术教程"]
-tags = ["Emacs", "Org", "Hugo", "教程"]
+draft = false
 +++
 
 ## 配置 {#配置}
@@ -51,7 +51,25 @@ tags = ["Emacs", "Org", "Hugo", "教程"]
 #+author: Mox W
 #+date: <2025-10-11 六>
 #+hugo_base_dir: ../
+#+filetags: Emacs Org Hugo @技术教程
 ```
+
+顺便说明一下 Tag 和 Category 怎么配置：
+
+```org
+#+filetags: tag1 tag2 @cat1 @cat2
+```
+
+可以看到，标签或分类之间是用空格分割的。如果希望标签或分类本身就包含空格呢？
+
+`ox-hugo` 使用如下规则：
+
+```plain
+abc_def   -> abc-def
+abc__def  -> abc def
+abc___def -> abc_def
+```
+
 
 ## 生成 Markdown {#生成-markdown}
 
