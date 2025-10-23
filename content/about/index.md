@@ -32,4 +32,6 @@ layoutBackgroundHeaderSpace: false
 在一个玖捌伍给电脑的内存打补丁。
   
   
-博客的设计上，借鉴了 [ 昼梦日和 ](https://nanako.icu/) ，非常好审美使我大脑旋转。
+博客的设计上，借鉴了 [昼梦日和](https://nanako.icu/) ，非常好审美使我大脑旋转。
+
+评论系统参考了[这个博客](https://www.hetong-re4per.com/posts/use-waline-comment-on-hugo/) 和 [昼梦日和](https://nanako.icu/)。

@@ -9,12 +9,44 @@
 
 #+begin_src elisp
 (doom!
- 
- 
+ ;; 其他配置 
  :lang
  (org +pretty
       +hugo)
  )
+#+end_src
+
+在你的博客目录下，开一个用来放 =org= 的目录，比如根目录下：
+
+#+begin_src plain
+~/W/Blog/mox-blog [main] λ tree -L 1
+.
+├── archetypes
+├── assets
+├── config
+├── content
+├── data
+├── hugo.toml
+├── i18n
+├── layouts
+├── org
+├── public
+├── resources
+├── static
+└── themes
+
+13 directories, 1 file
+#+end_src
+
+在 =org= 目录下就可以用 =org-mode= 写博客了。
+
+确定好目录位置后，需要在博客的头部元数据里指定 =hugo= 工程的目录，也就是当前博客的根目录：
+
+#+begin_src org
+#+title: 如何在 Hugo 里写 Org
+#+author: Mox W
+#+date: <2025-10-11 六>
+#+hugo_base_dir: ../
 #+end_src
 
 
@@ -22,4 +54,17 @@
 
 直接使用 =org= 写就的文章，需要转换成 Markdown 才能被 Hugo 识别。
 
+
+
+在 Emacs 里，我们直接祭出 =M-x= 大法： =M-x org-export-dispatch=
+
+然后在弹出的菜单里敲击 =H h= 即可。
+
+这里注意一定是生成 =Hugo Capatible Markdown= ，选择 =File to Md file= 。
+
+其他选项里可能有 =subtree to md file= ，这相当于只将某一个标题（子树）导出。
+
+只要配置好 =hugo_base_dir= ，导出的 =md= 文件应该就会正常地落到 =content/posts/= 里。
+
+试一试吧。
 
