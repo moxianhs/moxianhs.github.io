@@ -240,3 +240,29 @@ body {
         padding-bottom: 70px; /* 预留空间，避免浮动按钮遮挡 */
     }
 }
+
+/* 让文章内容中的链接使用actionlink样式 */
+.prose a:not(.not-prose) {
+    color: rgba(68, 91, 149);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 2px solid rgba(68, 91, 149, 0.7);
+    font-weight: 500;
+}
+
+.dark .prose a:not(.not-prose) {
+    color: rgb(242, 242, 241);
+    border-bottom: 2px solid rgba(242, 242, 241, 0.7);
+}
+
+/* 鼠标悬停效果 */
+.prose a:not(.not-prose):hover {
+    background-color: rgba(46, 64, 91, 0.94);
+    color: rgb(243, 244, 246);
+}
+
+.dark .prose a:not(.not-prose):hover {
+    background-color: rgb(243, 244, 246);
+    color: rgba(46, 64, 91, 0.94);
+}
