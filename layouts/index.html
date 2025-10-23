@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />  
     <title>{{ .Title }}</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-    <link rel="stylesheet" href="/css/typography.css" />  
+    {{ $cssCustom := resources.Get "css/custom.css" }}
+    {{ if $cssCustom }}
+        <link rel="stylesheet" href="{{ $cssCustom.RelPermalink }}" />
+    {{ end }}
 </head>  
 <body>  
 {{ partial "head.html" . }}  
@@ -21,7 +24,10 @@
 
     <!-- 图片区块 -->  
     <div class="image-section">  
-        <img src="/img/background.jpg" alt="网站首页的封面背景图" class="background-image" />  
+        {{ $backgroundImage := resources.Get "img/background.jpg" }}
+        {{ if $backgroundImage }}
+            <img src="{{ $backgroundImage.RelPermalink }}" alt="网站首页的封面背景图" class="background-image" />
+        {{ end }}
     </div>  
   
     <!-- 文字区块 -->  
