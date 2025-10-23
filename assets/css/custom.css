@@ -1,0 +1,242 @@
+body {
+    background-color: rgb(242, 242, 241);
+    background-image:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 8px 8px;
+}
+
+.dark body {
+    background-color: rgba(68, 91, 149);
+    background-image:
+        linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 8px 8px;
+}
+
+.homepage-container html, .homepage-container body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* 顶部右上角语言切换 */
+.language-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 100px;
+    z-index: 50;
+    color: #445b95;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 整个页面布局容器 */
+.homepage-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 左侧图片区域 */
+.image-section {
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 右侧文字区域 */
+.text-section {
+    width: 66.66%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 文本内容区域 */
+.text-content {
+    margin-top: 16rem;
+}
+
+/* 标题与文本样式 */
+.homepage-title {
+    color: rgba(68, 91, 149);
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark .homepage-title {
+    color: rgb(242, 242, 241);
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+    .homepage-title {
+        font-size: 2.5rem; /* Tailwind: lg:text-5xl */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.homepage-subtitle {
+    font-size: 1rem;
+    color: #445b95;
+    margin-bottom: 1rem;
+}
+
+.homepage-description {
+    font-size: 1.125rem; /* Tailwind: text-lg */
+    color: #445b95; /* Tailwind: text-gray-700 */
+    line-height: 1.75;
+    max-width: 28rem;
+    margin: 1.5rem auto 2rem auto;
+    white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+    .homepage-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.homepage-action-link {
+    margin-top: 5rem;
+}
+
+/* 进入按钮的样式 */
+.link-hover-effect {
+    color: rgba(68, 91, 149);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 2px solid rgba(68, 91, 149, 0.7);
+    margin-top: 24px;
+}
+
+.dark .link-hover-effect {
+    color: rgb(242, 242, 241);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 2px solid rgba(242, 242, 241, 0.7);
+    margin-top: 24px;
+}
+
+/* 鼠标移动到进入按钮上显示的样式 */
+.link-hover-effect:hover {
+    background-color: rgba(46, 64, 91, 0.94);
+    color: rgb(243, 244, 246);
+}
+
+.dark .link-hover-effect:hover {
+    background-color: rgb(243, 244, 246);
+    color: rgba(46, 64, 91, 0.94);
+}
+
+/* 底部版权等信息 */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    color: rgb(29, 40, 65); /* Tailwind: text-neutral-500 */
+}
+
+.footer-attribution {
+    font-size: 0.75rem;
+}
+
+/* 仅移动端覆盖，不影响桌面布局 */
+@media (max-width: 768px) {
+    /* 容器：单列、合理留白 */
+    .homepage-container {
+        display: grid; /* 若原本不是 grid 也无妨 */
+        grid-template-columns: 1fr; /* 强制单列 */
+        gap: 16px;
+        min-height: 100dvh;
+    }
+
+    /* 大图：占满宽度、限制最高，避免只露窄条 */
+    .image-section {
+        overflow: hidden;
+        max-height: 42vh; /* 你可调成 36~50vh */
+        /* 如需“文字先出现”，可加：order: 1;（或把 .text-section 设为 order: -1）*/
+    }
+    .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 铺满裁切，观感更好 */
+        display: block;
+    }
+
+    /* 文案区：缩小字号，提升可读性 */
+    .text-section {
+        padding: 0 16px 16px;
+    }
+    .text-content {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    .homepage-title {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 8px 0 10px 16px;
+    }
+    .homepage-subtitle {
+        font-size: 17px;
+        margin: 0 0 10px 16px;
+    }
+    .homepage-description {
+        font-size: 15px;
+        line-height: 1.75;
+        margin: 0 0 16px 16px;
+    }
+
+    /* CTA：可换行、不溢出、触控友好 */
+    .homepage-action-link a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        word-break: break-word;
+        margin: 0 0 16px 16px;
+    }
+
+    /* 版权与语言按钮：不遮挡内容 */
+    .footer-info {
+        width: max-content;
+        font-size: 13px;
+        line-height: 1.7;
+        padding: 0 16px 16px;
+        margin-top: 12px;
+    }
+    .language-toggle {
+        right: 12px;
+        bottom: 56px;
+    }
+    body {
+        padding-bottom: 70px; /* 预留空间，避免浮动按钮遮挡 */
+    }
+}

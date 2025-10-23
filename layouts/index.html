@@ -1,0 +1,80 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8" />  
+    <title>{{ .Title }}</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" href="/css/typography.css" />  
+</head>  
+<body>  
+{{ partial "head.html" . }}  
+
+<!-- 顶部语言选择浮动按钮 -->  
+<div class="language-toggle">  
+    <div>  
+        {{ partial "translations.html" . }}  
+    </div>  
+</div>  
+
+<!-- 主内容容器 -->  
+<div class="homepage-container">  
+
+    <!-- 图片区块 -->  
+    <div class="image-section">  
+        <img src="/img/background.jpg" alt="网站首页的封面背景图" class="background-image" />  
+    </div>  
+  
+    <!-- 文字区块 -->  
+    <div class="text-section">  
+        <div class="text-content">  
+            {{ with .Site.Title }}  
+                <h1 class="homepage-title">  
+                    {{ . }}  
+                </h1>  
+            {{ end }}  
+  
+            {{ with .Site.Params.subtitle }}  
+                <h2 class="homepage-subtitle">{{ . }}</h2>  
+            {{ end }}  
+  
+            {{ with .Site.Params.description }}  
+                <p class="homepage-description">  
+                    {{ . | markdownify }}  
+                </p>  
+            {{ end }}  
+  
+            {{ if .Site.Params.show_action_link }}  
+                <p class="homepage-action-link">  
+                    <a class="mt4 action link-hover-effect {{ .Site.Params.action_type }}" href="{{ .Site.Params.action_link | relURL }}">  
+                        {{ .Site.Params.action_label | safeHTML }}  
+                    </a>  
+                </p>  
+            {{ end }}  
+        </div>  
+  
+        <!-- 版权信息区块 -->  
+        <div class="footer-info">  
+            {{ if .Site.Params.footer.showCopyright | default true }}  
+                <p class="footer-text">  
+                    {{ with replace .Site.Params.copyright "{ year }" now.Year }}  
+                        {{ . | markdownify }}  
+                    {{ else }}  
+                        &copy; {{ now.Format "2006" }} {{ .Site.Params.Author.name | markdownify }}  
+                    {{ end }}  
+                </p>  
+            {{ end }}  
+  
+            {{ if .Site.Params.footer.showThemeAttribution | default true }}  
+                <p class="footer-text footer-attribution">  
+                    {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"  
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>` }}  
+                    {{ $blowfish := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"  
+            href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>` }}  
+                    {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Theme" $blowfish) | safeHTML }}  
+                </p>  
+            {{ end }}  
+        </div>  
+    </div>  
+</div>  
+</body>  
+</html>

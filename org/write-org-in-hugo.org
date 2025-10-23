@@ -1,0 +1,25 @@
+#+title: 如何在 Hugo 里写 Org
+#+author: Mox W
+#+date: <2025-10-11 六>
+#+hugo_base_dir: ../
+
+* 配置
+
+我是使用 Doom Emacs 的配置，所以在添加 ox-hugo 支持方面比较简单。
+
+#+begin_src elisp
+(doom!
+ 
+ 
+ :lang
+ (org +pretty
+      +hugo)
+ )
+#+end_src
+
+
+* 生成 Markdown
+
+直接使用 =org= 写就的文章，需要转换成 Markdown 才能被 Hugo 识别。
+
+

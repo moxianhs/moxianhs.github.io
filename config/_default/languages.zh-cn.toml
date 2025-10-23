@@ -2,17 +2,21 @@ disabled = false
 languageCode = "zh-cn"
 languageName = "Chinese"
 weight = 1
-title = "Mox's Blog"
-
+title = "默"
 [params]
   displayName = "ZH-CN"
   isoCode = "zh-cn"
   rtl = false
   dateFormat = "2006年1月2日"
+  subtitle = "于是，地球动了起来"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :{year}:"
+  action_type = "primary"
+  action_link = "/posts/"
+  action_label = "ENTER"
+  show_action_link = true
 
 [params.author]
   name = "Mox"

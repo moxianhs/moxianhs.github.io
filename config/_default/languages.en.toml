@@ -9,10 +9,15 @@ title = "Mox's Blog"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
+  subtitle = "There used to be a story teller."
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
+  action_type = "primary"
+  action_link = "en/posts/"
+  action_label = "ENTER"
+  show_action_link = true
 
 [params.author]
   name = "Mox"
