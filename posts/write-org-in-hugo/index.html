@@ -19,7 +19,7 @@
 
   
   
-  <meta name="keywords" content="Emacs,Org,Hugo,教程,">
+  <meta name="keywords" content="Emacs,Org,Hugo,">
   
   
   <link rel="canonical" href="https://moxianhs.github.io/posts/write-org-in-hugo/">
@@ -110,7 +110,6 @@
     <meta property="article:tag" content="Emacs">
     <meta property="article:tag" content="Org">
     <meta property="article:tag" content="Hugo">
-    <meta property="article:tag" content="教程">
 
   
   <meta name="twitter:card" content="summary">
@@ -137,10 +136,10 @@
     
     "dateModified": "2025-10-11T00:00:00\u002b08:00",
     
-    "keywords": ["Emacs","Org","Hugo","教程"],
+    "keywords": ["Emacs","Org","Hugo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "122"
+    "wordCount": "150"
   }]
   </script>
 
@@ -582,7 +581,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-11T00:00:00&#43;08:00">2025年10月11日</time><span class="px-2 text-primary-500">&middot;</span><span>122 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
+      <time datetime="2025-10-11T00:00:00&#43;08:00">2025年10月11日</time><span class="px-2 text-primary-500">&middot;</span><span>150 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
   <span id="vercount_value_page_pv">Loading</span> 次阅读
 </span>
     
@@ -659,16 +658,6 @@
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Hugo
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%95%99%E7%A8%8B/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    教程
   </span>
 </span>
 
@@ -830,6 +819,14 @@
 </span></span><span class="line"><span class="cl"><span class="cs">#+author</span><span class="c">: Mox W</span>
 </span></span><span class="line"><span class="cl"><span class="cs">#+date</span><span class="c">: &lt;2025-10-11 六&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="cs">#+hugo_base_dir</span><span class="c">: ../</span>
+</span></span><span class="line"><span class="cl"><span class="cs">#+filetags</span><span class="c">: Emacs Org Hugo @技术教程</span>
+</span></span></code></pre></div><p>顺便说明一下 Tag 和 Category 怎么配置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-org" data-lang="org"><span class="line"><span class="cl"><span class="cs">#+filetags</span><span class="c">: tag1 tag2 @cat1 @cat2</span>
+</span></span></code></pre></div><p>可以看到，标签或分类之间是用空格分割的。如果希望标签或分类本身就包含空格呢？</p>
+<p><code>ox-hugo</code> 使用如下规则：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">abc_def   -&gt; abc-def
+</span></span><span class="line"><span class="cl">abc__def  -&gt; abc def
+</span></span><span class="line"><span class="cl">abc___def -&gt; abc_def
 </span></span></code></pre></div>
 <h2 class="relative group">生成 Markdown 
     <div id="生成-markdown" class="anchor"></div>
