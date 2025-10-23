@@ -136,7 +136,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "26"
+    "wordCount": "122"
   }]
   </script>
 
@@ -578,7 +578,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-11T00:00:00&#43;08:00">2025年10月11日</time><span class="px-2 text-primary-500">&middot;</span><span>26 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
+      <time datetime="2025-10-11T00:00:00&#43;08:00">2025年10月11日</time><span class="px-2 text-primary-500">&middot;</span><span>122 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
   <span id="vercount_value_page_pv">Loading</span> 次阅读
 </span>
     
@@ -718,6 +718,30 @@
 </span></span><span class="line"><span class="cl"> <span class="p">(</span><span class="nv">org</span> <span class="nv">+pretty</span>
 </span></span><span class="line"><span class="cl">      <span class="nv">+hugo</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"> <span class="p">)</span>
+</span></span></code></pre></div><p>在你的博客目录下，开一个用来放 <code>org</code> 的目录，比如根目录下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">~/W/Blog/mox-blog [main] λ tree -L 1
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── archetypes
+</span></span><span class="line"><span class="cl">├── assets
+</span></span><span class="line"><span class="cl">├── config
+</span></span><span class="line"><span class="cl">├── content
+</span></span><span class="line"><span class="cl">├── data
+</span></span><span class="line"><span class="cl">├── hugo.toml
+</span></span><span class="line"><span class="cl">├── i18n
+</span></span><span class="line"><span class="cl">├── layouts
+</span></span><span class="line"><span class="cl">├── org
+</span></span><span class="line"><span class="cl">├── public
+</span></span><span class="line"><span class="cl">├── resources
+</span></span><span class="line"><span class="cl">├── static
+</span></span><span class="line"><span class="cl">└── themes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">13 directories, 1 file
+</span></span></code></pre></div><p>在 <code>org</code> 目录下就可以用 <code>org-mode</code> 写博客了。</p>
+<p>确定好目录位置后，需要在博客的头部元数据里指定 <code>hugo</code> 工程的目录，也就是当前博客的根目录：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-org" data-lang="org"><span class="line"><span class="cl"><span class="cs">#+title</span><span class="c">: 如何在 Hugo 里写 Org</span>
+</span></span><span class="line"><span class="cl"><span class="cs">#+author</span><span class="c">: Mox W</span>
+</span></span><span class="line"><span class="cl"><span class="cs">#+date</span><span class="c">: &lt;2025-10-11 六&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cs">#+hugo_base_dir</span><span class="c">: ../</span>
 </span></span></code></pre></div>
 <h2 class="relative group">生成 Markdown 
     <div id="生成-markdown" class="anchor"></div>
@@ -729,6 +753,12 @@
     
 </h2>
 <p>直接使用 <code>org</code> 写就的文章，需要转换成 Markdown 才能被 Hugo 识别。</p>
+<p>在 Emacs 里，我们直接祭出 <code>M-x</code> 大法： <code>M-x org-export-dispatch</code></p>
+<p>然后在弹出的菜单里敲击 <code>H h</code> 即可。</p>
+<p>这里注意一定是生成 <code>Hugo Capatible Markdown</code> ，选择 <code>File to Md file</code> 。</p>
+<p>其他选项里可能有 <code>subtree to md file</code> ，这相当于只将某一个标题（子树）导出。</p>
+<p>只要配置好 <code>hugo_base_dir</code> ，导出的 <code>md</code> 文件应该就会正常地落到 <code>content/posts/</code> 里。</p>
+<p>试一试吧。</p>
 
           
           
