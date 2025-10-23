@@ -4,6 +4,7 @@
 
   <url>
     <loc>https://moxianhs.github.io/en/</loc>
+    <lastmod>2025-10-23T14:53:19+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -15,6 +16,22 @@
       rel="alternate"
       hreflang="en"
       href="https://moxianhs.github.io/en/"
+    />
+  </url>
+  <url>
+    <loc>https://moxianhs.github.io/en/posts/</loc>
+    <lastmod>2025-10-23T14:53:19+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="https://moxianhs.github.io/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://moxianhs.github.io/en/posts/"
     />
   </url>
 </urlset>
