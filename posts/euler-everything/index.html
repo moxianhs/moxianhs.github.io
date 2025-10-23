@@ -19,7 +19,7 @@
 
   
   
-  
+  <meta name="keywords" content="openEuler,Linux,安装,换源,">
   
   
   <link rel="canonical" href="https://moxianhs.github.io/posts/euler-everything/">
@@ -42,8 +42,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.469619f540fd4d85cda02b2780c07c04c4e203e6d79c3cc218431356763cf7aa4bd7d7fe140c256b0939b1895f0832c24a1f80f53d70bcc3c12c7f2af34d8eed.css"
-    integrity="sha512-RpYZ9UD9TYXNoCsngMB8BMTiA&#43;bXnDzCGEMTVnY896pL19f&#43;FAwlawk5sYlfCDLCSh&#43;A9T1wvMPBLH8q802O7Q==">
+    href="/css/main.bundle.min.b5d3886c8d2ea93015749b309d5f394d6a309f4f2842896663361cdb18544c8cdbea275a57603ea85f1a3d1d3eb6d2d030e300b1ae33261b9e46b9e692b1c3b9.css"
+    integrity="sha512-tdOIbI0uqTAVdJswnV85TWown08oQolmYzYc2xhUTIzb6idaV2A&#43;qF8aPR0&#43;ttLQMOMAsa4zJhueRrnmkrHDuQ==">
 
   
   
@@ -107,6 +107,10 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-10-09T10:59:15+08:00">
     <meta property="article:modified_time" content="2025-10-09T10:59:15+08:00">
+    <meta property="article:tag" content="OpenEuler">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="安装">
+    <meta property="article:tag" content="换源">
 
   
   <meta name="twitter:card" content="summary">
@@ -133,7 +137,7 @@
     
     "dateModified": "2025-10-09T10:59:15\u002b08:00",
     
-    
+    "keywords": ["openEuler","Linux","安装","换源"],
     
     "mainEntityOfPage": "true",
     "wordCount": "50"
@@ -588,8 +592,92 @@
   </div>
 
   
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
 
   
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    系统运维
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/openeuler/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OpenEuler
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E5%AE%89%E8%A3%85/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    安装
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E6%8D%A2%E6%BA%90/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    换源
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
   
 
   
@@ -702,7 +790,7 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h1 class="relative group">安装 
+<h2 class="relative group">安装 
     <div id="安装" class="anchor"></div>
     
     <span
@@ -710,10 +798,10 @@
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%ae%89%e8%a3%85" aria-label="锚点">#</a>
     </span>        
     
-</h1>
+</h2>
 <p>如正常安装 openEuler 一样安装。</p>
 
-<h1 class="relative group">换源 
+<h2 class="relative group">换源 
     <div id="换源" class="anchor"></div>
     
     <span
@@ -721,7 +809,7 @@
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%8d%a2%e6%ba%90" aria-label="锚点">#</a>
     </span>        
     
-</h1>
+</h2>
 <p>先找到设备号</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk <span class="c1"># 在结果里找到 TYPE 为 rom 的设备，看看大小对不对</span>
 </span></span></code></pre></div><p>假设是 <code>/dev/sr0</code> （大概率是这个）</p>

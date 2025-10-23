@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 默</title>
+    <link>https://moxianhs.github.io/tags/linux/</link>
+    <description>Recent content in Linux on 默</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>moxian.wzy@gmail.com (Mox)</managingEditor>
+    <webMaster>moxian.wzy@gmail.com (Mox)</webMaster>
+    <copyright>© 2025 Mox</copyright>
+    <lastBuildDate>Thu, 09 Oct 2025 10:59:15 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>离线环境下使用 everthing 版本 ISO 安装 openEuler 系统并换源</title>
+      <link>https://moxianhs.github.io/posts/euler-everything/</link>
+      <pubDate>Thu, 09 Oct 2025 10:59:15 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/euler-everything/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Linux虚拟机中命令行简单硬盘扩容</title>
+      <link>https://moxianhs.github.io/posts/resize-disk-in-cli/</link>
+      <pubDate>Fri, 29 Nov 2024 16:01:37 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/resize-disk-in-cli/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

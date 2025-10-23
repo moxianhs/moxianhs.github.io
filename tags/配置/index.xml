@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>配置 on 默</title>
+    <link>https://moxianhs.github.io/tags/%E9%85%8D%E7%BD%AE/</link>
+    <description>Recent content in 配置 on 默</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>moxian.wzy@gmail.com (Mox)</managingEditor>
+    <webMaster>moxian.wzy@gmail.com (Mox)</webMaster>
+    <copyright>© 2025 Mox</copyright>
+    <lastBuildDate>Thu, 02 Jan 2025 17:42:56 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静态博客文章里的图片</title>
+      <link>https://moxianhs.github.io/posts/imgs-beside-article/</link>
+      <pubDate>Thu, 02 Jan 2025 17:42:56 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/imgs-beside-article/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hugo Configuration</title>
+      <link>https://moxianhs.github.io/posts/hugo-configuration/</link>
+      <pubDate>Tue, 26 Nov 2024 14:58:18 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/hugo-configuration/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on 默</title>
+    <link>https://moxianhs.github.io/tags/github/</link>
+    <description>Recent content in GitHub on 默</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>moxian.wzy@gmail.com (Mox)</managingEditor>
+    <webMaster>moxian.wzy@gmail.com (Mox)</webMaster>
+    <copyright>© 2025 Mox</copyright>
+    <lastBuildDate>Tue, 26 Nov 2024 14:59:37 +0800</lastBuildDate><atom:link href="https://moxianhs.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github Pages Configuration</title>
+      <link>https://moxianhs.github.io/posts/github-pages-configuration/</link>
+      <pubDate>Tue, 26 Nov 2024 14:59:37 +0800</pubDate>
+      <author>moxian.wzy@gmail.com (Mox)</author>
+      <guid>https://moxianhs.github.io/posts/github-pages-configuration/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
