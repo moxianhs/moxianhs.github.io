@@ -37,3 +37,12 @@ layoutBackgroundHeaderSpace: false
 评论系统参考了[这个博客](https://www.hetong-re4per.com/posts/use-waline-comment-on-hugo/) 和 [昼梦日和](https://nanako.icu/)。
 
 
+## 施工 TODO
+
+- [X] 重新设计首页
+- [X] 添加标签
+- [X] 删除部分无用草稿
+- [ ] 修改字体
+- [ ] 调整配色
+- [ ] 部分配图重新设计
+
