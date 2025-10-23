@@ -30,3 +30,6 @@ layoutBackgroundHeaderSpace: false
 希望讲故事给世界听。
 
 在一个玖捌伍给电脑的内存打补丁。
+  
+  
+博客的设计上，借鉴了 [ 昼梦日和 ](https://nanako.icu/) ，非常好审美使我大脑旋转。
