@@ -25,6 +25,21 @@ layoutBackgroundHeaderSpace: false
 
 ## 关于我
 
+{{< keyword >}}
+ENTJ
+{{< /keyword >}}
+
+{{< keyword >}}
+Computer Science
+{{< /keyword >}}
+
+{{< keyword >}}
+Novelist
+{{< /keyword >}}
+
+
+
+
 一个始终在徒劳的人。
 
 希望讲故事给世界听。

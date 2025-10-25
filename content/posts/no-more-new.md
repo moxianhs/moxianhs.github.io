@@ -4,7 +4,7 @@ author = ["Mox W"]
 date = 2025-10-25T00:00:00+08:00
 tags = ["生活方式"]
 categories = ["随笔"]
-draft = false
+draft = true
 +++
 
 {{< figure src="/ox-hugo/the-iphone-13.jpg" >}}
