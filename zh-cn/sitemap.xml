@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://moxianhs.github.io/posts/</loc>
-    <lastmod>2025-10-11T00:00:00+08:00</lastmod>
+    <lastmod>2025-10-25T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://moxianhs.github.io/</loc>
-    <lastmod>2025-10-11T00:00:00+08:00</lastmod>
+    <lastmod>2025-10-25T00:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -33,6 +33,12 @@
       hreflang="zh-cn"
       href="https://moxianhs.github.io/"
     />
+  </url>
+  <url>
+    <loc>https://moxianhs.github.io/posts/no-more-new/</loc>
+    <lastmod>2025-10-25T00:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moxianhs.github.io/posts/write-org-in-hugo/</loc>
