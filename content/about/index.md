@@ -29,7 +29,7 @@ layoutBackgroundHeaderSpace: false
 
 希望讲故事给世界听。
 
-在一个玖捌伍给电脑的内存打补丁。
+研究给电脑的内存打补丁。
   
   
 博客的设计上，借鉴了 [昼梦日和](https://nanako.icu/) ，非常好审美使我大脑旋转。
@@ -44,8 +44,9 @@ layoutBackgroundHeaderSpace: false
 - [X] 添加评论系统
 - [X] 添加标签
 - [X] 删除部分无用草稿
-- [ ] 修改字体
+- [X] 修改字体
 - [ ] 调整配色
 - [ ] 部分配图重新设计
+- [ ] 调整 TOC 样式
 - [ ] 添加 SEO 相关支持
 

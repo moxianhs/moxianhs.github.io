@@ -2,7 +2,7 @@ disabled = false
 languageCode = "zh-cn"
 languageName = "Chinese"
 weight = 1
-title = "默"
+title = "默弦"
 [params]
   displayName = "ZH-CN"
   isoCode = "zh-cn"
@@ -25,7 +25,7 @@ title = "默"
   imageQuality = 96
   headline = "如果可以，就成为更好的自己"
   subtitle = "操作系统·异构内存·强化学习"
-  bio = "A Master student of DSLab @LZU "
+  bio = "A Master student of DSLab@LZU "
    links = [
      { email = "mailto:moxian.wzy@gmail.com" },
 #     { link = "https://link-to-some-website.com/" },
