@@ -14,8 +14,8 @@
   <meta name="theme-color">
 
   
-  <title>简单的Gcov&#43;Lcov使用 &middot; 默</title>
-    <meta name="title" content="简单的Gcov&#43;Lcov使用 &middot; 默">
+  <title>简单的Gcov&#43;Lcov使用 &middot; 默弦</title>
+    <meta name="title" content="简单的Gcov&#43;Lcov使用 &middot; 默弦">
 
   
   
@@ -42,8 +42,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.b5d3886c8d2ea93015749b309d5f394d6a309f4f2842896663361cdb18544c8cdbea275a57603ea85f1a3d1d3eb6d2d030e300b1ae33261b9e46b9e692b1c3b9.css"
-    integrity="sha512-tdOIbI0uqTAVdJswnV85TWown08oQolmYzYc2xhUTIzb6idaV2A&#43;qF8aPR0&#43;ttLQMOMAsa4zJhueRrnmkrHDuQ==">
+    href="/css/main.bundle.min.5efb8e1509040328317a556f8dde555e40184f2a90f4167e32f7151f5be934897887c5f35f3e9254d5316b922d0a605be5be7cc2ae64e5c857237d490a121585.css"
+    integrity="sha512-XvuOFQkEAygxelVvjd5VXkAYTyqQ9BZ&#43;MvcVH1vpNIl4h8XzXz6SVNUxa5ItCmBb5b58wq5k5chXI31JChIVhQ==">
 
   
   
@@ -53,6 +53,13 @@
     integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
   
   
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
   
   
     
@@ -100,7 +107,7 @@
 
   
   <meta property="og:url" content="https://moxianhs.github.io/posts/simple-gcov/">
-  <meta property="og:site_name" content="默">
+  <meta property="og:site_name" content="默弦">
   <meta property="og:title" content="简单的Gcov&#43;Lcov使用">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
@@ -292,7 +299,7 @@
     <nav class="flex space-x-3">
       
         <a href="/" class="text-base font-medium">
-          默
+          默弦
         </a>
       
     </nav>
@@ -306,7 +313,7 @@
   
   class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
   
-  <p class="text-base font-medium" title="默">
+  <p class="text-base font-medium" title="默弦">
     首页
   </p>
 </a>
@@ -446,7 +453,7 @@
     
     class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-bg font-bg" title="默">
+    <p class="text-bg font-bg" title="默弦">
       首页
     </p>
   </a>
@@ -499,6 +506,16 @@
 
 
 
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
 
 
   </div>
@@ -572,6 +589,8 @@
   
 
   
+    
+  
 
   
   
@@ -582,7 +601,19 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-12-23T15:18:43&#43;08:00">2024年12月23日</time><span class="px-2 text-primary-500">&middot;</span><span>122 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
+      <time datetime="2024-12-23T15:18:43&#43;08:00">2024年12月23日</time><span class="px-2 text-primary-500">&middot;</span><span>122 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+<span class="px-2 text-primary-500">&middot;</span><span title="页面阅读量">
   <span id="vercount_value_page_pv">Loading</span> 次阅读
 </span>
     
@@ -728,7 +759,7 @@
       </div>
     
     
-      <div class="text-sm text-neutral-700 dark:text-neutral-400">A Master student of DSLab @LZU</div>
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">A Master student of DSLab@LZU</div>
     
     <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
@@ -782,6 +813,136 @@
       
       
       
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gcov--lcov">Gcov + Lcov</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#修改makefile">修改Makefile</a></li>
+    <li><a href="#指令序列">指令序列</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gcov--lcov">Gcov + Lcov</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#修改makefile">修改Makefile</a></li>
+    <li><a href="#指令序列">指令序列</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = true
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
       
 
 

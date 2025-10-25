@@ -1,3 +1,27 @@
+@font-face {  
+  font-family: 'title-font';  
+  src: url('/fonts/GenWanMin2TW-SB.woff2') format('woff2');  
+  font-weight: normal;  
+  font-style: normal;  
+  /*unicode-range: U+4E00-9FFF;  /* 只包含 CJK 中文范围 */
+}
+@font-face {
+    font-family: 'main';
+    src: url('/fonts/DreamHanSerifCN-W4.woff2') format('woff2');
+    font-weight: normal;  
+    font-style: normal;  
+    
+}
+
+html {
+    font-family: main, "PingFang SC", "Noto Serif SC", "Microsoft YaHei";  ;
+}
+
+/* 中文标题样式（作用于 h1-h6） */
+h1:lang(zh), h2:lang(zh), h3:lang(zh), h4:lang(zh), h5:lang(zh), h6:lang(zh) {  
+  font-family: title-font-en, title-font, "PingFang SC", "Noto Serif SC", "Microsoft YaHei";  
+}
+
 body {
     background-color: rgb(242, 242, 241);
     background-image:
