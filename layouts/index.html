@@ -41,8 +41,7 @@
   
             {{ with .Site.Params.subtitle }}  
                 <h2 class="homepage-subtitle">{{ . }}</h2>  
-            {{ end }}  
-  
+            {{ end }}
             {{ with .Site.Params.description }}  
                 <p class="homepage-description">  
                     {{ . | markdownify }}  

@@ -37,20 +37,17 @@ Computer Science
 Novelist
 {{< /keyword >}}
 
-
-
-
 一个始终在徒劳的人。
 
 希望讲故事给世界听。
 
 研究给电脑的内存打补丁。
   
-  
+## 关于博客
+
 博客的设计上，借鉴了 [昼梦日和](https://nanako.icu/) ，非常好审美使我大脑旋转。
 
 评论系统参考了[这个博客](https://www.hetong-re4per.com/posts/use-waline-comment-on-hugo/) 和 [昼梦日和](https://nanako.icu/)。
-
 
 ## 施工 TODO
 
@@ -62,6 +59,6 @@ Novelist
 - [X] 修改字体
 - [ ] 调整配色
 - [ ] 部分配图重新设计
+- [ ] 添加配图的介绍超链接
 - [ ] 调整 TOC 样式
 - [ ] 添加 SEO 相关支持
-
